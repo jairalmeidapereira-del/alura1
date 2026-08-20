@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loja de Roupas — Minimal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#" class="logo">Moda<span class="dot">.</span></a>
+      </div>
+
+      <div class="search-cart">
+        <div class="search">
+          <input id="searchInput" type="search" placeholder="Buscar produtos, ex: camiseta, vestido..." />
+        </div>
+        <button class="cart" id="cartBtn" aria-label="Carrinho">
+          🛒 <span id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="categories container" aria-label="Categorias">
+      <button class="cat-btn active" data-cat="all">Todos</button>
+      <button class="cat-btn" data-cat="masculino">Masculino</button>
+      <button class="cat-btn" data-cat="feminino">Feminino</button>
+      <button class="cat-btn" data-cat="infantil">Infantil</button>
+      <button class="cat-btn" data-cat="acessorios">Acessórios</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="products-grid" id="productsGrid">
+      <!-- Product cards: ajuste ou duplique conforme necessário -->
+      <article class="product-card" data-title="Camiseta Básica" data-cat="masculino">
+        <img src="https://picsum.photos/seed/camiseta1/600/600" alt="Camiseta Básica" />
+        <div class="card-body">
+          <h3 class="product-title">Camiseta Básica</h3>
+          <p class="price">R$ 49,90</p>
+          <div class="card-actions">
+            <button class="btn secondary quickview">Visualizar</button>
+            <button class="btn primary add-to-cart">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-title="Vestido Floral" data-cat="feminino">
+        <img src="https://picsum.photos/seed/vestido1/600/600" alt="Vestido Floral" />
+        <div class="card-body">
+          <h3 class="product-title">Vestido Floral</h3>
+          <p class="price">R$ 129,90</p>
+          <div class="card-actions">
+            <button class="btn secondary quickview">Visualizar</button>
+            <button class="btn primary add-to-cart">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-title="Jaqueta Jeans" data-cat="masculino">
+        <img src="https://picsum.photos/seed/jaqueta1/600/600" alt="Jaqueta Jeans" />
+        <div class="card-body">
+          <h3 class="product-title">Jaqueta Jeans</h3>
+          <p class="price">R$ 199,90</p>
+          <div class="card-actions">
+            <button class="btn secondary quickview">Visualizar</button>
+            <button class="btn primary add-to-cart">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-title="Calça Skinny" data-cat="feminino">
+        <img src="https://picsum.photos/seed/calca1/600/600" alt="Calça Skinny" />
+        <div class="card-body">
+          <h3 class="product-title">Calça Skinny</h3>
+          <p class="price">R$ 99,90</p>
+          <div class="card-actions">
+            <button class="btn secondary quickview">Visualizar</button>
+            <button class="btn primary add-to-cart">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-title="Conjunto Infantil" data-cat="infantil">
+        <img src="https://picsum.photos/seed/infantil1/600/600" alt="Conjunto Infantil" />
+        <div class="card-body">
+          <h3 class="product-title">Conjunto Infantil</h3>
+          <p class="price">R$ 69,90</p>
+          <div class="card-actions">
+            <button class="btn secondary quickview">Visualizar</button>
+            <button class="btn primary add-to-cart">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-title="Boné Clássico" data-cat="acessorios">
+        <img src="https://picsum.photos/seed/bone1/600/600" alt="Boné Clássico" />
+        <div class="card-body">
+          <h3 class="product-title">Boné Clássico</h3>
+          <p class="price">R$ 39,90</p>
+          <div class="card-actions">
+            <button class="btn secondary quickview">Visualizar</button>
+            <button class="btn primary add-to-cart">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-title="Camisa Social" data-cat="masculino">
+        <img src="https://picsum.photos/seed/camisa1/600/600" alt="Camisa Social" />
+        <div class="card-body">
+          <h3 class="product-title">Camisa Social</h3>
+          <p class="price">R$ 149,90</p>
+          <div class="card-actions">
+            <button class="btn secondary quickview">Visualizar</button>
+            <button class="btn primary add-to-cart">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-title="Lenço Estampado" data-cat="acessorios">
+        <img src="https://picsum.photos/seed/lenco1/600/600" alt="Lenço Estampado" />
+        <div class="card-body">
+          <h3 class="product-title">Lenço Estampado</h3>
+          <p class="price">R$ 29,90</p>
+          <div class="card-actions">
+            <button class="btn secondary quickview">Visualizar</button>
+            <button class="btn primary add-to-cart">Adicionar</button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal Quick View -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-left">
+        <img id="modalImg" src="" alt="" />
+      </div>
+      <div class="modal-right">
+        <h2 id="modalTitle">Título do Produto</h2>
+        <p id="modalPrice" class="price"></p>
+        <p id="modalDesc">Descrição rápida do produto. Tecido, cuidados e tamanhos disponíveis.</p>
+        <div class="modal-actions">
+          <button id="modalAdd" class="btn primary">Adicionar ao Carrinho</button>
+          <button id="modalCloseBtn" class="btn secondary">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Moda. Design limpo e experiência simples.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
